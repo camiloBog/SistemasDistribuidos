@@ -5,7 +5,7 @@
 //               e-mail:molesoftware@mail.ru             //
 ///////////////////////////////////////////////////////////
 //          JAD JavaDecompiler by Pavel Kuznetsov        //
-// www.geocities.com/SiliconValley/Bridge/8617/jad.html  Ivan  //
+// www.geocities.com/SiliconValley/Bridge/8617/jad.html  Ivan  Corredor //
 ///////////////////////////////////////////////////////////
 
 import java.awt.Graphics;
