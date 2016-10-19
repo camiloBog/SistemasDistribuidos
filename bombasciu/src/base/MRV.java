@@ -1,3 +1,4 @@
+package base;
 ///////////////////////////////////////////////////////////
 // DeJaved by mDeJava v1.0. Copyright 1999 MoleSoftware. //
 //       To download last version of this software:      //
@@ -8,37 +9,35 @@
 // www.geocities.com/SiliconValley/Bridge/8617/jad.html  //
 ///////////////////////////////////////////////////////////
 
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 
-class Bomb extends GameObject
+class MRV extends GameObject
 {
 
-    final int bombWidth = 19;
-    final int bombHeight = 26;
+    final int mrvWidth = 12;
+    final int mrvHeight = 6;
+    final int jump = 10;
     int x = 0;
     int y = 0;
-    int endx = 0;
     int endy = 0;
     int speed = 0;
-    Image bombImage = null;
+    Image mrvImage = null;
     MissileCommando parent = null;
 
-    Bomb(int i, int j, int k, int l, int i1, Image image, MissileCommando missilecommando)
+    MRV(int i, int j, int k, int l, Image image, MissileCommando missilecommando)
     {
         x = i;
         y = j;
-        endx = k;
-        endy = l;
-        speed = i1;
-        bombImage = image;
+        endy = k;
+        speed = l;
+        mrvImage = image;
         parent = missilecommando;
     }
 
     void erase(Graphics g)
     {
         g.setColor(skyColor);
-        g.fillRect(x - 9, y - 9, 19, 26);
+        g.fillOval(x - 6, y - 3, 12, 6);
     }
 
     void paint(Graphics g)
@@ -52,11 +51,20 @@ class Bomb extends GameObject
             explode = false;
             return;
         }
+        double d = Math.random();
+        if(d < 0.25D)
+            x -= 10;
+        else
+        if(d > 0.75D)
+            x += 10;
         y += speed;
         if(y > endy)
             alive = false;
         if(alive)
-            g.drawImage(bombImage, x - 9, y - 9, 19, 26, parent);
+        {
+            g.setColor(Color.orange);
+            g.fillOval(x - 6, y - 3, 12, 6);
+        }
     }
 
     boolean collision(int i, int j, int k)
@@ -64,7 +72,7 @@ class Bomb extends GameObject
         if(!alive || explode)
             return false;
         int l = (int)Math.sqrt((i - x) * (i - x) + (j - y) * (j - y));
-        k += 9;
+        k += 6;
         return l <= k;
     }
 

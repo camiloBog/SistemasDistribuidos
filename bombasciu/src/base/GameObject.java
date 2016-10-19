@@ -1,3 +1,4 @@
+package base;
 ///////////////////////////////////////////////////////////
 // DeJaved by mDeJava v1.0. Copyright 1999 MoleSoftware. //
 //       To download last version of this software:      //
@@ -9,13 +10,33 @@
 ///////////////////////////////////////////////////////////
 
 import java.awt.Color;
+import java.awt.Graphics;
 
-class Shot extends Explosion
+abstract class GameObject
 {
 
-    Shot(int i, int j, int k)
+    boolean alive = false;
+    boolean explode = false;
+    Color skyColor = null;
+
+    abstract void erase(Graphics g);
+
+    abstract void paint(Graphics g);
+
+    void explode()
     {
-        super(i, j, k);
-        color = Color.black;
+        explode = true;
+    }
+
+    boolean alive()
+    {
+        return alive;
+    }
+
+    GameObject()
+    {
+        alive = true;
+        explode = false;
+        skyColor = new Color(148, 198, 231);
     }
 }
