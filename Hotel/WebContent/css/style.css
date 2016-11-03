@@ -1,0 +1,177 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	padding-left: 250px;
+	font-family: Georgia;
+	color: black;
+	background-color: #E6E4EB;
+}
+
+ul {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    display: inline-block;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 220px;	
+	position: absolute;
+	top: 120px;
+	left: 10px;
+}
+
+ul li {
+    background-color: #2175bc;
+}
+
+ul li a {
+    display: block;
+    padding: 10px 10px 10px 20px;
+    font-family: Arial;
+	font-size: 13px;
+	text-decoration: none;
+    text-transform: uppercase;
+	background-color: #2175bc;
+	color: #fff;	
+}
+
+ul li a:hover {
+    border-right: 10px solid white;
+    background-color: #2586d7;
+	margin-top: -2px;
+	padding-left: 20px;
+	padding-bottom: 13px;
+	padding-top: 15px;
+}
+
+iframe {
+	top: 120px;
+	bottom: 20px;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 1000px;
+	height: 500px;
+}
+
+input[type="button"] {
+	font-family: Arial;
+	font-size: 13px;
+	text-decoration: none;
+	background-color: #2175bc;
+	color: #fff;
+	padding: 4px;
+	border: solid 1px #DEDEDE;
+	border-radius: 5px;
+	height: auto;
+	width: auto;
+}
+
+input[type="button"]:focus {
+	background-color: #2586d7;
+}
+
+input[type="button"]:hover {
+	background-color: #2586d7;
+}
+
+input[type="text"] {
+	padding: 10px;
+	border: solid 1px #DEDEDE;
+	border-radius: 5px;
+	height: 5px;
+	width: auto;
+}
+
+input[type="text"]:focus {
+	box-shadow: 0 0 20px #2175bc;
+}
+
+input[type="text"]:disabled {
+	background-color: #BDBCC2;
+}
+
+
+input[type="date"] {
+	padding: 10px;
+	border: solid 1px #DEDEDE;
+	border-radius: 5px;
+	height: 5px;
+	width: auto;
+}
+
+input[type="date"]:focus {
+	box-shadow: 0 0 20px #2175bc;
+}
+
+select {
+	border: 0 !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: white url(select-arrow.png) no-repeat 97% center;
+	color: black;
+	border-radius: 5px;
+	padding: 5px;
+	padding-right: 25px;
+	width: auto;
+	height: auto;
+	
+	/* Quita la flecha por defecto de firefox*/
+	text-indent: 0.01px; 
+	text-overflow: "";
+	
+}
+	
+select:focus {
+	box-shadow: 0 0 25px #2175bc;
+}
+
+option{
+	color: black;
+	background-color: #CCCFC8;
+}
+
+table th {
+	font-size: 14px;
+	background-color: #2175bc;
+	color: #FFFFFF;
+	border-radius: 5px;
+	font-family: "Trebuchet MS", Arial;
+	width: auto;
+}
+
+#titulo {
+	font-family: Helvetica;
+	padding-left: 10px;
+}
+
+#bodyInicio, #bodyRegClientes, 
+#bodyRegServicios, #bodyRegConsumos {
+	padding-left: 10px;
+	font-family: Georgia;
+}
+
+#BtnRegCliente, #BtnRegServOfr, 
+#BtnRegServCon {
+	font-family: Arial;
+	font-size: 23px;
+	text-decoration: none;
+	background-color: #2175bc;
+	color: #fff;
+	padding: 4px;
+	border: solid 1px #DEDEDE;
+	border-radius: 5px;
+	height: auto;
+	width: auto;
+}
+
+#BtnRegCliente:hover, 
+#BtnRegServOfr:hover, 
+#BtnRegServCon:hover,
+#BtnRegCliente:focus, 
+#BtnRegServOfr:focus, 
+#BtnRegServCon:focus {
+	background-color: #2586d7;
+	font-size: 25px;
+	
+}
